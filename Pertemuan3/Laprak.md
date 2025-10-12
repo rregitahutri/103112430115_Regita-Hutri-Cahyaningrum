@@ -346,7 +346,7 @@ int main(){
 ### Output Unguided 3 :
 
 ##### Output 1
-![Screenshot Output Unguided 3_1](https://github.com/rregitahutri/103112430115_Regita-Hutri-Cahyaningrum/blob/main/Pertemuan3/output/Output_Modul3_Soal3.png)
+![Screenshot Output Unguided 3_1](https://github.com/rregitahutri/103112430115_Regita-Hutri-Cahyaningrum/blob/main/Pertemuan3/output/Output_Modul3_Soal33.png)
 
 Program di atas merupakan implementasi lengkap yang menunjukkan cara menukar isi dua array dua dimensi berukuran 3x3 dengan dua pendekatan berbeda, yaitu pertukaran secara manual tanpa pointer dan pertukaran menggunakan pointer. Program ini menggunakan konsep dasar dari array multidimensi, fungsi, dan pointer dalam bahasa C++ untuk memperlihatkan bagaimana data dapat diubah atau dipertukarkan baik secara langsung maupun melalui manipulasi alamat memori.
 
