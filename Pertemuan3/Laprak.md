@@ -258,7 +258,7 @@ int main(){
 ### Output Unguided 2 :
 
 ##### Output 1
-![Screenshot Output Unguided 2_1](https://github.com/rregitahutri/103112430115_Regita-Hutri-Cahyaningrum/blob/main/Pertemuan3/output/Output_Modul3_Soal2.png)
+![Screenshot Output Unguided 2_1](https://github.com/rregitahutri/103112430115_Regita-Hutri-Cahyaningrum/blob/main/Pertemuan3/output/Output_Modul3_Soal22.png)
 
 Program di atas merupakan implementasi ADT (Abstract Data Type) dalam bahasa C++ untuk merepresentasikan data pelajaran. Program ini dibagi menjadi tiga bagian utama, yaitu file main.cpp, pelajaran.cpp, dan pelajaran.h. Pembagian ini mengikuti konsep *modular programming*, di mana setiap file memiliki tanggung jawab yang berbeda agar program lebih terstruktur, mudah dipelihara, dan dapat digunakan kembali di proyek lain.
 
