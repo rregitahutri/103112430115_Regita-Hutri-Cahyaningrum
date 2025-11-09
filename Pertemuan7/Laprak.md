@@ -2,11 +2,11 @@
 <p align="center">Regita Hutri Cahyaningrum - 103112430115</p>
 
 ## Dasar Teori
-Struktur data merupakan cara untuk mengorganisasi dan menyimpan data agar dapat diakses dan dimodifikasi secara efisien. Salah satu jenis struktur data yang sering digunakan adalah stack, yaitu struktur data yang mengikuti prinsip LIFO (Last In First Out), di mana elemen terakhir yang dimasukkan akan menjadi elemen pertama yang dikeluarkan [1]. Dalam implementasinya, stack dapat dibuat menggunakan array maupun linked list.
+Struktur data merupakan cara untuk mengorganisasi dan menyimpan data agar dapat diakses dan dimodifikasi secara efisien. Salah satu jenis struktur data yang sering digunakan adalah stack, yaitu struktur data yang mengikuti prinsip LIFO (Last In First Out), di mana elemen terakhir yang dimasukkan akan menjadi elemen pertama yang dikeluarkan. Dalam implementasinya, stack dapat dibuat menggunakan array maupun linked list.
 
-Implementasi stack dengan array memiliki kelebihan dalam kemudahan akses dan kecepatan karena menggunakan indeks untuk menyimpan data secara berurutan di memori. Namun, ukuran stack terbatas karena kapasitas array ditentukan di awal deklarasi [2]. Sebaliknya, implementasi stack dengan linked list lebih fleksibel karena setiap elemen (node) dialokasikan secara dinamis menggunakan pointer. Hal ini membuat ukuran stack dapat menyesuaikan kebutuhan memori selama program berjalan [3].
+Implementasi stack dengan array memiliki kelebihan dalam kemudahan akses dan kecepatan karena menggunakan indeks untuk menyimpan data secara berurutan di memori. Namun, ukuran stack terbatas karena kapasitas array ditentukan di awal deklarasi [1]. Sebaliknya, implementasi stack dengan linked list lebih fleksibel karena setiap elemen (node) dialokasikan secara dinamis menggunakan pointer. Hal ini membuat ukuran stack dapat menyesuaikan kebutuhan memori selama program berjalan [2].
 
-Menurut penelitian dalam Jurnal Sains Informatika Terapan, struktur linked list banyak digunakan untuk menangani data dinamis karena efisiensi alokasi dan kemudahan dalam proses penyisipan maupun penghapusan data [4]. Selain itu, penggunaan array dan linked list pada struktur data stack sering diaplikasikan dalam sistem antrian, undo-redo, konversi notasi, dan pengolahan data yang membutuhkan kontrol urutan operasi tertentu [5].
+Menurut penelitian dalam Jurnal Sains Informatika Terapan, struktur linked list banyak digunakan untuk menangani data dinamis karena efisiensi alokasi dan kemudahan dalam proses penyisipan maupun penghapusan data [3]. Selain itu, penggunaan array dan linked list pada struktur data stack sering diaplikasikan dalam sistem antrian, undo-redo, konversi notasi, dan pengolahan data yang membutuhkan kontrol urutan operasi tertentu [4].
 
 
 ## Guided 
@@ -841,12 +841,11 @@ Implementasi stack berbasis array lebih sederhana dan memiliki akses data yang c
 Melalui berbagai fungsi seperti push, pop, update, view, dan searchData, program ini memperlihatkan bagaimana operasi dasar stack bekerja dalam pengelolaan data. Selain itu, pengembangan fungsi seperti pushAscending() dan getInputStream() menunjukkan bahwa struktur data stack dapat dimodifikasi untuk mendukung kebutuhan logika yang lebih kompleks. Dengan demikian, pemahaman konsep stack sangat penting sebagai dasar dalam membangun algoritma dan sistem pemrograman yang efisien.
 
 ## Referensi
-[1] Johnson Sihombing. (2019). Penerapan Stack dan Queue pada Array dan Linked List dalam Java. Jurnal Infokom, Piksi Ganesha, Vol. 7 No. 2.
-<br>[2] Universitas Dharma Andalas. (2024). Implementasi Stack dan Array pada Pengurutan Lagu dengan Metode Selection Sort. Jurnal Teknologi dan Sistem Informasi (JTEKSIS), Vol. 9 No. 1. Diakses melalui https://jurnal.unidha.ac.id/index.php/jteksis/article/view/1192/759
+<br>[1] Universitas Dharma Andalas. (2024). Implementasi Stack dan Array pada Pengurutan Lagu dengan Metode Selection Sort. Jurnal Teknologi dan Sistem Informasi (JTEKSIS), Vol. 9 No. 1. Diakses melalui https://jurnal.unidha.ac.id/index.php/jteksis/article/view/1192/759
 
-<br>[3] Agung Wijoyo, dkk. (2023). Evaluasi Efisiensi Struktur Data Linked List pada Implementasi Sistem Antrian. Jurnal Riset Ilmu Informatika (JRiiN). Diakses melalui https://jurnalmahasiswa.com/index.php/jriin/article/view/1060/678
+<br>[2] Agung Wijoyo, dkk. (2023). Evaluasi Efisiensi Struktur Data Linked List pada Implementasi Sistem Antrian. Jurnal Riset Ilmu Informatika (JRiiN). Diakses melalui https://jurnalmahasiswa.com/index.php/jriin/article/view/1060/678
 
-<br>[4] Nanda Puspitasari, dkk. (2022). Analisis Struktur Data Linked List dalam Pengolahan Data Mahasiswa. Jurnal Sains Informatika Terapan (JSIT), RCF Indonesia. Diakses melalui https://rcf-indonesia.org/home/index.php/jsit/article/view/591/418
+<br>[3] Nanda Puspitasari, dkk. (2022). Analisis Struktur Data Linked List dalam Pengolahan Data Mahasiswa. Jurnal Sains Informatika Terapan (JSIT), RCF Indonesia. Diakses melalui https://rcf-indonesia.org/home/index.php/jsit/article/view/591/418
 
-<br>[5] Ahmad Ghiyas Ahyar, dkk. (2021). Jurnal Struktur Data – Pembelajaran Array, Linked List, Stack, dan Queue. Scribd. Diakses melalui https://www.scribd.com/document/504317899/JURNAL-Struktur-Data
+<br>[4] Ahmad Ghiyas Ahyar, dkk. (2021). Jurnal Struktur Data – Pembelajaran Array, Linked List, Stack, dan Queue. Scribd. Diakses melalui https://www.scribd.com/document/504317899/JURNAL-Struktur-Data
 
