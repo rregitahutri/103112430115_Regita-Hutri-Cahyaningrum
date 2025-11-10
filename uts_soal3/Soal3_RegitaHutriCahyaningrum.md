@@ -1,4 +1,5 @@
 ### stackGame.h
+```C++
 #ifndef STACKGAME_H
 #define STACKGAME_H
 
@@ -21,9 +22,11 @@ void kelolaAksi(const std::string &aksiPemain, Stack &StackAksi, Stack &StackRed
 void hitungTotalDamage(Stack &S, int &totalDamage);
 
 #endif
+```
 
 ### stackGame.cpp
 
+```C++
 #include "stackGame.h"
 #include <iostream> 
 
@@ -101,9 +104,11 @@ void hitungTotalDamage(Stack &S, int &totalDamage) {
         push(S, aksi);
     }
 }
+```
 
 ### main.cpp
 
+```C++
 #include "stackGame.h"
 #include <iostream> // Diperlukan untuk cout/endl
 
@@ -130,6 +135,7 @@ int main() {
 
     return 0;
 }    
+```
 
 ### OUTPUT
 ![Screenshot Output Unguided 3_1](https://github.com/rregitahutri/103112430115_Regita-Hutri-Cahyaningrum/blob/main/uts_soal3/output.png)
