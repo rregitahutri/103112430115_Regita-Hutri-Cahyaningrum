@@ -75,3 +75,18 @@ void hitungTotalDamage(Stack &S, int &totalDamage) {
         push(S, aksi);
     }
 }
+
+void printStack(const Stack &S, const std::string &namaStack) {
+    std::cout << namaStack << ": [";
+    if (is_empty(S)) {
+        std::cout << "kosong";
+    } else {
+        for (int i = 0; i <= S.top; i++) {
+            std::cout << S.info[i];
+            if (i < S.top) {
+                std::cout << ", "; 
+            }
+        }
+    }
+    std::cout << "]" << std::endl;
+}

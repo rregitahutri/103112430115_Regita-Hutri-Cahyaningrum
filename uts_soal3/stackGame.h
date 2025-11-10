@@ -18,5 +18,6 @@ void push(Stack &S, const std::string &x);
 void pop(Stack &S, std::string &p);
 void kelolaAksi(const std::string &aksiPemain, Stack &StackAksi, Stack &StackRedo);
 void hitungTotalDamage(Stack &S, int &totalDamage);
+void printStack(const Stack &S, const std::string &namaStack);
 
 #endif
