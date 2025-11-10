@@ -1,6 +1,6 @@
 #include "stackGame.h"
 #include <iostream> 
-
+#include <sstream>
 
 void create_stack(Stack &S) {
     S.top = -1;
@@ -39,7 +39,7 @@ void kelolaAksi(const std::string &aksiPemain, Stack &StackAksi, Stack &StackRed
 
     if (aksiPemain == "ATTACK" || aksiPemain == "DEFENSE") {
         push(StackAksi, aksiPemain);
-        create_stack(StackRedo); // Reset redo history
+        create_stack(StackRedo); 
     } 
     else if (aksiPemain == "UNDO") {
         if (!is_empty(StackAksi)) {
@@ -89,4 +89,20 @@ void printStack(const Stack &S, const std::string &namaStack) {
         }
     }
     std::cout << "]" << std::endl;
+}
+
+std::string getStackString(const Stack &S) {
+    std::stringstream ss;
+    ss << "[";
+    if (is_empty(S)) {
+    } else {
+        for (int i = 0; i <= S.top; i++) {
+            ss << S.info[i];
+            if (i < S.top) {
+                ss << " ";
+            }
+        }
+    }
+    ss << "]";
+    return ss.str(); 
 }

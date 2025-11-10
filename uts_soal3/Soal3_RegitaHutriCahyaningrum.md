@@ -21,6 +21,7 @@ void pop(Stack &S, std::string &p);
 void kelolaAksi(const std::string &aksiPemain, Stack &StackAksi, Stack &StackRedo);
 void hitungTotalDamage(Stack &S, int &totalDamage);
 void printStack(const Stack &S, const std::string &namaStack);
+std::string getStackString(const Stack &S);
 
 #endif
 ```
@@ -30,7 +31,7 @@ void printStack(const Stack &S, const std::string &namaStack);
 ```C++
 #include "stackGame.h"
 #include <iostream> 
-
+#include <sstream>
 
 void create_stack(Stack &S) {
     S.top = -1;
@@ -69,7 +70,7 @@ void kelolaAksi(const std::string &aksiPemain, Stack &StackAksi, Stack &StackRed
 
     if (aksiPemain == "ATTACK" || aksiPemain == "DEFENSE") {
         push(StackAksi, aksiPemain);
-        create_stack(StackRedo); // Reset redo history
+        create_stack(StackRedo); 
     } 
     else if (aksiPemain == "UNDO") {
         if (!is_empty(StackAksi)) {
@@ -120,6 +121,22 @@ void printStack(const Stack &S, const std::string &namaStack) {
     }
     std::cout << "]" << std::endl;
 }
+
+std::string getStackString(const Stack &S) {
+    std::stringstream ss;
+    ss << "[";
+    if (is_empty(S)) {
+    } else {
+        for (int i = 0; i <= S.top; i++) {
+            ss << S.info[i];
+            if (i < S.top) {
+                ss << " ";
+            }
+        }
+    }
+    ss << "]";
+    return ss.str(); 
+}
 ```
 
 ### main.cpp
@@ -127,49 +144,55 @@ void printStack(const Stack &S, const std::string &namaStack) {
 ```C++
 #include "stackGame.h"
 #include <iostream> 
+#include <iomanip>
+
+void printTableRow(const std::string &aksi, const Stack &StackAksi, const Stack &StackRedo) {
+    std::cout << "| " << std::left << std::setw(8) << aksi;
+    
+    std::cout << "| " << std::left << std::setw(30) << getStackString(StackAksi);
+    std::cout << " Top = " << std::left << std::setw(5) << StackAksi.top;
+
+    std::cout << "| " << std::left << std::setw(30) << getStackString(StackRedo);
+    std::cout << " Top = " << std::left << std::setw(5) << StackRedo.top << "|" << std::endl;
+}
 
 int main() {
     Stack StackAksi, StackRedo;
     create_stack(StackAksi);
     create_stack(StackRedo);
-    int totalDamage; // Deklarasikan di atas
 
-    std::cout << "--- Program Dimulai ---" << std::endl;
-    printStack(StackAksi, "Stack Aksi");
-    printStack(StackRedo, "Stack Redo");
+    // Untuk Header Tabel
+    std::cout << "+-" << std::string(8, '-') << "+-" << std::string(42, '-') << "+-" << std::string(42, '-') << "+" << std::endl;
+    std::cout << "| " << std::left << std::setw(8) << "Aksi";
+    std::cout << "| " << std::left << std::setw(42) << "Stack Aksi";
+    std::cout << "| " << std::left << std::setw(42) << "Stack Redo" << "|" << std::endl;
+    std::cout << "+-" << std::string(8, '-') << "+-" << std::string(42, '-') << "+-" << std::string(42, '-') << "+" << std::endl;
 
-    std::cout << "\n--- Aksi 1: ATTACK ---" << std::endl;
     kelolaAksi("ATTACK", StackAksi, StackRedo);
-    printStack(StackAksi, "Stack Aksi");
-    printStack(StackRedo, "Stack Redo");
+    printTableRow("ATTACK", StackAksi, StackRedo);
 
-    std::cout << "\n--- Aksi 2: ATTACK ---" << std::endl;
     kelolaAksi("ATTACK", StackAksi, StackRedo);
-    printStack(StackAksi, "Stack Aksi");
-    printStack(StackRedo, "Stack Redo");
+    printTableRow("ATTACK", StackAksi, StackRedo);
 
-    std::cout << "\n--- Aksi 3: DEFENSE ---" << std::endl;
     kelolaAksi("DEFENSE", StackAksi, StackRedo);
-    printStack(StackAksi, "Stack Aksi");
-    printStack(StackRedo, "Stack Redo");
-    
-    std::cout << "\n--- Hitung Damage Awal ---" << std::endl;
-    hitungTotalDamage(StackAksi, totalDamage);
-    std::cout << "Total Damage: " << totalDamage << std::endl; // Harusnya 65
+    printTableRow("DEFENSE", StackAksi, StackRedo);
 
-    std::cout << "\n--- Aksi 4: UNDO ---" << std::endl;
+    kelolaAksi("ATTACK", StackAksi, StackRedo);
+    printTableRow("ATTACK", StackAksi, StackRedo);
+
     kelolaAksi("UNDO", StackAksi, StackRedo);
-    printStack(StackAksi, "Stack Aksi");
-    printStack(StackRedo, "Stack Redo");
-    hitungTotalDamage(StackAksi, totalDamage);
-    std::cout << "Total Damage setelah UNDO: " << totalDamage << std::endl; // Harusnya 60
+    printTableRow("UNDO", StackAksi, StackRedo);
+    
+    kelolaAksi("UNDO", StackAksi, StackRedo);
+    printTableRow("UNDO", StackAksi, StackRedo);
 
-    std::cout << "\n--- Aksi 5: REDO ---" << std::endl;
     kelolaAksi("REDO", StackAksi, StackRedo);
-    printStack(StackAksi, "Stack Aksi");
-    printStack(StackRedo, "Stack Redo");
-    hitungTotalDamage(StackAksi, totalDamage);
-    std::cout << "Total Damage setelah REDO: " << totalDamage << std::endl; // Harusnya 65
+    printTableRow("REDO", StackAksi, StackRedo);
+    
+    kelolaAksi("DEFENSE", StackAksi, StackRedo);
+    printTableRow("DEFENSE", StackAksi, StackRedo);
+
+    std::cout << "+-" << std::string(8, '-') << "+-" << std::string(42, '-') << "+-" << std::string(42, '-') << "+" << std::endl;
 
     return 0;
 }
