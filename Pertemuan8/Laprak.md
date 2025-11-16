@@ -484,7 +484,7 @@ int main() {
 ##### Output 1
 ![Screenshot Output Unguided 1_1](https://github.com/rregitahutri/103112430115_Regita-Hutri-Cahyaningrum/blob/main/Pertemuan8/output/Soal1.png)
 
-Implementasi diatas menggunakan array yang bekerja dengan konsep bahwa head tetap berada di indeks 0, sehingga setiap operasi dequeue harus menggeser seluruh elemen ke kiri satu posisi. Queue dinyatakan kosong ketika head dan tail bernilai -1, dan dinyatakan penuh ketika tail mencapai indeks maksimum array. Pada operasi enqueue, elemen baru ditambahkan pada posisi tail + 1, sementara pada dequeue, elemen pertama dihapus dengan menggeser seluruh elemen sehingga elemen berikutnya selalu kembali ke posisi indeks 0. Mekanisme ini sederhana tetapi kurang efisien karena proses penggeseran terjadi setiap kali dequeue. Fungsi printInfo menampilkan posisi head–tail serta daftar elemen yang sedang berada dalam antrian sehingga memudahkan dalam memantau perubahan isi queue selama program berjalan.
+Implementasi diatas menggunakan array yang bekerja dengan konsep bahwa head tetap berada di indeks 0, sehingga setiap operasi dequeue harus menggeser seluruh elemen ke kiri satu posisi. Queue dinyatakan kosong ketika head dan tail bernilai -1, dan dinyatakan penuh ketika tail mencapai indeks maksimum array. Pada operasi enqueue, elemen baru ditambahkan pada posisi tail + 1, sementara pada dequeue, elemen pertama dihapus dengan menggeser seluruh elemen sehingga elemen berikutnya selalu kembali ke posisi indeks 0. Mekanisme ini sederhana tetapi kurang efisien karena proses penggeseran terjadi setiap kali dequeue. Fungsi printInfo menampilkan posisi head & tail serta daftar elemen yang sedang berada dalam antrian sehingga memudahkan dalam memantau perubahan isi queue selama program berjalan.
 
 ### 2. Buatlah implementasi ADT Queue pada file “queue.cpp” dengan menerapkan mekanisme queue Alternatif 2 (head bergerak, tail bergerak).
 
@@ -608,7 +608,7 @@ int main() {
 ##### Output 1
 ![Screenshot Output Unguided 2_1](https://github.com/rregitahutri/103112430115_Regita-Hutri-Cahyaningrum/blob/main/Pertemuan8/output/Soal2.png)
 
-Program diatas menggunakan array statis di mana baik head maupun tail akan terus bertambah seiring proses enqueue dan dequeue tanpa kembali ke awal. Queue dianggap kosong ketika head dan tail bernilai -1, dan dianggap penuh ketika tail mencapai indeks maksimum array. Pada proses enqueue, elemen ditambahkan di posisi tail + 1, sedangkan pada dequeue, elemen dihapus dengan menggeser head satu langkah ke kanan. Jika setelah penghapusan posisi head melewati tail, queue kembali ke kondisi kosong. Metode ini bekerja sederhana namun memiliki kelemahan karena ruang kosong di awal array tidak dapat digunakan kembali. Fungsi printInfo menampilkan posisi head–tail beserta isi queue yang sedang aktif, sehingga seluruh proses antrian dapat dipantau dengan jelas.
+Program diatas menggunakan array statis di mana baik head maupun tail akan terus bertambah seiring proses enqueue dan dequeue tanpa kembali ke awal. Queue dianggap kosong ketika head dan tail bernilai -1, dan dianggap penuh ketika tail mencapai indeks maksimum array. Pada proses enqueue, elemen ditambahkan di posisi tail + 1, sedangkan pada dequeue, elemen dihapus dengan menggeser head satu langkah ke kanan. Jika setelah penghapusan posisi head melewati tail, queue kembali ke kondisi kosong. Metode ini bekerja sederhana namun memiliki kelemahan karena ruang kosong di awal array tidak dapat digunakan kembali. Fungsi printInfo menampilkan posisi head & tail beserta isi queue yang sedang aktif, sehingga seluruh proses antrian dapat dipantau dengan jelas.
 
 ### 3. Buatlah implementasi ADT Queue pada file “queue.cpp” dengan menerapkan mekanisme queue Alternatif 3 (head dan tail berputar).
 
@@ -739,14 +739,14 @@ int main() {
 ##### Output 1
 ![Screenshot Output Unguided 3_1](https://github.com/rregitahutri/103112430115_Regita-Hutri-Cahyaningrum/blob/main/Pertemuan8/output/Soal3.png)
 
-Kode diatas adalah implementasi Queue Alternatif 3 (head dan tail berputar / circular queue) menggunakan konsep antrian yang memanfaatkan array melingkar sehingga posisi head dan tail akan kembali ke indeks 0 ketika mencapai batas array. Ketika melakukan enqueue, elemen baru dimasukkan ke posisi (tail + 1) % MAKSIMAL, sementara ketika dequeue, elemen dihapus dengan menggeser head ke (head + 1) % MAKSIMAL. Kondisi kosong ditandai dengan head == -1 dan tail == -1, sedangkan kondisi penuh terjadi ketika tail + 1 modulo ukuran array sama dengan head. Dengan mekanisme ini, ruang pada array dapat digunakan kembali meskipun elemen di awal sudah dikeluarkan, sehingga lebih efisien dibanding queue linear. Output program menunjukkan proses memasukkan dan mengeluarkan elemen sambil memperlihatkan posisi head–tail yang berputar sesuai karakteristik circular queue.
+Kode diatas adalah implementasi Queue Alternatif 3 (head dan tail berputar / circular queue) menggunakan konsep antrian yang memanfaatkan array melingkar sehingga posisi head dan tail akan kembali ke indeks 0 ketika mencapai batas array. Ketika melakukan enqueue, elemen baru dimasukkan ke posisi (tail + 1) % MAKSIMAL, sementara ketika dequeue, elemen dihapus dengan menggeser head ke (head + 1) % MAKSIMAL. Kondisi kosong ditandai dengan head == -1 dan tail == -1, sedangkan kondisi penuh terjadi ketika tail + 1 modulo ukuran array sama dengan head. Dengan mekanisme ini, ruang pada array dapat digunakan kembali meskipun elemen di awal sudah dikeluarkan, sehingga lebih efisien dibanding queue linear. Output program menunjukkan proses memasukkan dan mengeluarkan elemen sambil memperlihatkan posisi head & tail yang berputar sesuai karakteristik circular queue.
 
 ## Kesimpulan
 Pada praktikum ini, kamu berhasil mengimplementasikan struktur data Queue menggunakan dua pendekatan utama: linked list dan array statis. Implementasi linked list memberikan fleksibilitas tanpa batasan ukuran, sedangkan array statis memperlihatkan tiga mekanisme antrian berbeda:
 
-##### 1. Alternatif 1 (head diam, tail bergerak) – mudah dipahami, tetapi operasi dequeue kurang efisien karena perlu menggeser elemen.
-##### 2. Alternatif 2 (head & tail bergerak) – lebih efisien tanpa penggeseran, namun ruang kosong di awal array tidak dapat digunakan kembali.
-##### 3. Alternatif 3 (circular queue) – paling optimal karena memanfaatkan seluruh ruang array secara melingkar tanpa pemborosan.
+##### 1. Alternatif 1 (head diam, tail bergerak). Mudah dipahami, tetapi operasi dequeue kurang efisien karena perlu menggeser elemen.
+##### 2. Alternatif 2 (head & tail bergerak). Lebih efisien tanpa penggeseran, namun ruang kosong di awal array tidak dapat digunakan kembali.
+##### 3. Alternatif 3 (circular queue). Paling optimal karena memanfaatkan seluruh ruang array secara melingkar tanpa pemborosan.
 
 ## Referensi
 [1] Trijayanti, A., Aulia, I., Khairunisa, N., Purba, F. A., & Gunawan, I. (2025). Implementasi Struktur Data Antrian Queue dalam Sistem Penjadwalan Proses pada Sistem Operasi. Jurnal Publikasi Teknik Informatika, 4(2), 48–53. Diakses melalui https://doi.org/10.55606/jupti.v4i2.4170
