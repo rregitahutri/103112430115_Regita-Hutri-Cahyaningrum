@@ -163,6 +163,7 @@ void searchByFinalPriceRange(List L, float minPrice, float maxPrice) {
     if (!found) cout << "Tidak ada produk dalam rentang harga tersebut." << endl;
 }
 
+//Bagian B
 void MaxHargaAkhir(List L) {
     cout << "\n=== PRODUK HARGA AKHIR TERTINGGI ===" << endl;
     if (isEmpty(L)) return;

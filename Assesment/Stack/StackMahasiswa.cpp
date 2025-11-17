@@ -88,6 +88,7 @@ void SearchNilaiAkhir(StackMahasiswa S, float min, float max) {
     if (!found) cout << "Tidak ada data dalam rentang tersebut." << endl;
 }
 
+//Bagian B
 void MaxNilaiAkhir(StackMahasiswa S) {
     cout << "\nMAHASISWA NILAI TERTINGGI:" << endl;
     if (isEmpty(S)) {

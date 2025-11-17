@@ -41,6 +41,8 @@ void deleteAfter(List &L, address Q, Product &P);
 void updateAtPosition(List &L, int posisi, Product dataBaru);
 void viewList(List L);
 void searchByFinalPriceRange(List L, float minPrice, float maxPrice);
+
+//Bagian B
 void MaxHargaAkhir(List L);
 
 #endif

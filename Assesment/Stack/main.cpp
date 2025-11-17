@@ -1,5 +1,5 @@
 #include <iostream>
-#include "StackMahasiswa.h" // Include header saja
+#include "StackMahasiswa.h"
 
 using namespace std;
 

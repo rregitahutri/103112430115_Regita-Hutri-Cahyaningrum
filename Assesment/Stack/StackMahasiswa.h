@@ -29,6 +29,8 @@ void Pop(StackMahasiswa &S);
 void Update(StackMahasiswa &S, int posisi, Mahasiswa dataBaru);
 void View(StackMahasiswa S);
 void SearchNilaiAkhir(StackMahasiswa S, float min, float max);
+
+//Bagian B
 void MaxNilaiAkhir(StackMahasiswa S);
 
 #endif

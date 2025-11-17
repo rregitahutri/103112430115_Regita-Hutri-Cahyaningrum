@@ -65,6 +65,7 @@ void viewQueue(QueueEkspedisi Q) {
     }
 }
 
+//Bagian B
 float TotalBiayaPengiriman(QueueEkspedisi Q) {
     float total = 0;
     if (!isEmpty(Q)) {

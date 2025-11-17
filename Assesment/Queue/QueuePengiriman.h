@@ -27,6 +27,7 @@ void enQueue(QueueEkspedisi &Q, Paket data);
 void deQueue(QueueEkspedisi &Q);
 void viewQueue(QueueEkspedisi Q);
 
+//Bagian B
 float TotalBiayaPengiriman(QueueEkspedisi Q);
 
 #endif

@@ -9,7 +9,7 @@ struct Song {
     string Artist;
     int DurationSec;
     int PlayCount;
-    float Rating; // Skala 0.0 - 5.0
+    float Rating; 
 };
 
 typedef struct Node* address;
@@ -25,11 +25,9 @@ struct List {
     address tail;
 };
 
-// Deklarasi Fungsi Helper (Rumus dipindah ke .cpp)
 float getPopularityScore(Song S);
 address getAddressAt(List L, int pos);
 
-// Deklarasi Fungsi DLL
 bool isEmpty(List L);
 void createList(List &L);
 address allocate(Song S);

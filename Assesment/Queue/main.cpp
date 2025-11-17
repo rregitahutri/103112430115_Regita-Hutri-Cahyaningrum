@@ -16,7 +16,7 @@ int main() {
         cout << "1. Input Data Paket" << endl;
         cout << "2. Hapus Data Paket" << endl;
         cout << "3. Tampilkan queue paket" << endl;
-        cout << "4. Hitung Total Biaya Pengiriman" << endl;
+        cout << "4. Hitung Total Biaya Pengiriman" << endl; //Bagian B
         cout << "Pilihan anda : ";
         cin >> pilihan;
 
@@ -42,7 +42,7 @@ int main() {
             viewQueue(Q);
             break;
 
-        case 4:
+        case 4: //Bagian B
             cout << "\nTotal Biaya Pengiriman Semua Paket: Rp. " 
                  << fixed << setprecision(0) << TotalBiayaPengiriman(Q) << endl;
             break;
